@@ -8,7 +8,6 @@ import Words from './Words';
 class App extends React.Component {
   render() {
     return (
-      <div>
         <Router>
           <AppShell>
             <div>
@@ -18,7 +17,6 @@ class App extends React.Component {
             </div>
           </AppShell>
         </Router>
-      </div>
     );
   }
 }
