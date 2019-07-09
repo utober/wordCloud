@@ -35,8 +35,8 @@ class Texts extends React.Component {
     this.state = {
       fileName: '',
       fileContent: null,
-      texts: {},
       textName: '',
+      texts: {},
       dialog: false
     }
   }
@@ -137,21 +137,21 @@ class Texts extends React.Component {
           return (
             <Card key={id}>
               <CardContent>
-                <Typography color="textSecondary" gutterBotton>
+                <Typography color="textSecondary" gutterBottom>
                   내용: {text.textContent.substring(0, 24) + "..."}
                 </Typography>
                 <Grid container>
-                  <Grid item xs={9}>
+                  <Grid item xs={8}>
                     <Typography variant="h5" component="h2">
                       {text.textName.substring(0, 24) + "..."}
                     </Typography>
                   </Grid>
-                  <Grid item xs={1}>
+                  <Grid item xs={2}>
                     <Link component={RouterLink} to={"detail/" + id}>
                       <Button variant="contained" color="primary">보기</Button>
                     </Link>
                   </Grid>
-                  <Grid item xs={1}>
+                  <Grid item xs={2}>
                     <Button variant="contained" color="primary" onClick={() => this.handleDelete(id)} >삭제</Button>
                   </Grid>
                 </Grid>
@@ -187,5 +187,6 @@ class Texts extends React.Component {
     )
   }
 }
+
 
 export default withStyles(styles)(Texts);
